@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import {backDrop} from './components/backdrop.js';
 import {HomepageLayout} from './components/homepagelayout.js';
-import { Image, Reveal } from 'semantic-ui-react';
 import {Link, BrowserRouter, Switch, Route} from 'react-router-dom';
 import {FixedNav} from './components/fixedNav.js';
 import {ScrollToTop} from './components/scrollToTop.js';
@@ -12,6 +11,7 @@ import About from './components/about.js';
 import Contact from './components/contact.js';
 
 import './App.css';
+import { Responsive } from 'semantic-ui-react';
 
 class Counter extends React.Component{
   constructor(props) {
@@ -42,19 +42,19 @@ class App extends React.Component{
   render () {
     return(
       <BrowserRouter>
-        <ScrollToTop>
-        <div className="App">
-
-          <FixedNav/>
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/menu' exact component={Menu} />
-            <Route path='/about' exact component={About} />
-            <Route path='/contact' exact component={Contact} />
-          </Switch>
-            
-          </div>
-        </ScrollToTop>
+        <Responsive>
+          <ScrollToTop>
+            <div className="App">
+              <FixedNav/>
+              <Switch>
+                <Route path='/' exact component={Home} />
+                <Route path='/about' exact component={About} />
+                <Route path='/menu' exact component={Menu} />
+                <Route path='/contact' exact component={Contact} />
+              </Switch>
+              </div>
+          </ScrollToTop>
+        </Responsive>
       </BrowserRouter>
     );
   }

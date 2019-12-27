@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
 import {
     Segment,
     Container,
@@ -11,7 +12,35 @@ import {
     Image
      } from 'semantic-ui-react';
 
+
 class Menu extends React.Component{
+
+    styles = StyleSheet.create({
+        iconmini: {
+            fontSize: '0.8em',
+
+        },
+
+        red: {
+            backgroundColor: 'red'
+        },
+    
+        blue: {
+            backgroundColor: 'blue'
+        },
+    
+        hover: {
+            ':hover': {
+                backgroundColor: 'red'
+            }
+        },
+    
+        small: {
+            '@media (max-width: 600px)': {
+                backgroundColor: 'red',
+            }
+        }
+    });
 
     state = { 
         visible: true,
@@ -45,14 +74,12 @@ class Menu extends React.Component{
 
                         <Grid.Row centered>
                             <Button.Group size='small'>
-                                <Button 
-                                    content='Brunch'
+                                <Button
                                     onClick={this.displayBrunch}>
                                     Brunch
                                 </Button>
                                 <Button.Or />
-                                <Button 
-                                    content='Dinner'
+                                <Button
                                     onClick={this.displayDinner}>
                                     Dinner
                                 </Button>
@@ -71,8 +98,9 @@ class Menu extends React.Component{
                     <Grid>    
                         <Divider section />
                         <Grid.Row centered>
-                            <Icon name='map marker' size='large' />
-                            <Header as='h4' content='Toronto, ON, Canada' />
+                            <Header as="h5">
+                                King's Diner <Icon className={css(this.styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
+                            </Header>
                         </Grid.Row>
                     </Grid>
             </Segment>

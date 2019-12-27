@@ -1,4 +1,7 @@
 import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
+import Footer from '../components/footer.js';
+
 import {
     Segment,
     Container,
@@ -16,10 +19,12 @@ class Home extends React.Component{
                 <Container textAlign='center'>
                     <Grid>    
                         <Divider section />
+
+                        {/* FOOTER */}
                         <Grid.Row centered>
-                            <Icon name='map marker' size='large' />
-                            <Header as='h4' content='Toronto, ON, Canada' />
+                            <Footer/>
                         </Grid.Row>
+
                     </Grid>
                     
                 </Container>
