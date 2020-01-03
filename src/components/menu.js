@@ -45,17 +45,15 @@ class Menu extends React.Component{
     state = { 
         visible: true,
         url: '/images/menu1.png' 
-                }
+    }
 
     displayDinner = (prevState) => {
 
-        this.setState((prevState) => ({visible: !this.state.visible}))
         this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu1.png'}))
     }
     
     displayDinner = (prevState) => {
 
-        this.setState((prevState) => ({visible: !this.state.visible}))
         this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu2.jpg'}))
     }
         
@@ -65,9 +63,9 @@ class Menu extends React.Component{
         const url = this.state.url
 
         return(
-            <Segment vertical>
+            <div id="menu">
+                <Segment id={"menu"} vertical>
                     <Grid style={{ marginTop: '1em' }} centered>    
-                        <Divider section/>
                         <Grid.Row centered>
                             <Header as='h1' content='Menu' />
                         </Grid.Row>
@@ -94,16 +92,8 @@ class Menu extends React.Component{
                             <Image size='large' src={this.state.url} />
                         </Transition>
                     </Grid>
-
-                    <Grid>    
-                        <Divider section />
-                        <Grid.Row centered>
-                            <Header as="h5">
-                                King's Diner <Icon className={css(this.styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
-                            </Header>
-                        </Grid.Row>
-                    </Grid>
-            </Segment>
+                </Segment>
+            </div>
         );
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 import {
   Menu,
   Container,
@@ -7,17 +7,24 @@ import {
   Button,
 } from 'semantic-ui-react'
 
-export const FixedNav = ({mobile}) => (
-        <div>
+export const FixedNav = ({mobile}) => {
+
+  return(
+    <div>
 
           <Menu fixed='top' stackable>
             <Container>
-              <Menu.Item as={Link} to='/' style={{fontSize:"25px"}} header>King's Diner</Menu.Item>
-              <Menu.Item as={Link} to='/about'>About</Menu.Item>
-              <Menu.Item as={Link} to='/menu'>Menu</Menu.Item>
-              <Menu.Item as={Link} to='/contact'>Contact</Menu.Item>
+
+            <Menu.Item className={"logo"} as={Link} to='/#home' header>King's Diner</Menu.Item>
+
+            {["about", "menu", "contact"].map(sec => (
+              <Menu.Item as={Link} to={`/#${sec}`}>{sec}</Menu.Item>
+            ))}
+
             </Container>
           </Menu>
           
         </div>
-)
+
+    )
+}

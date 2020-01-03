@@ -46,26 +46,28 @@ class Contact extends React.Component{
 
     render () {
         return(
-            <Segment vertical centered>
-                <Container centered>
+            <div id="contact">
+                <Segment id={"contact"} vertical centered='true'>
+                    <Container centered='true'>
                         <Divider section />
         
-                            <Header as='h1' content='Contact' style={{ marginTop: '1.82em', marginBottom:'2em' }}/>
+                        <Header as='h1' content='Contact' style={{ marginTop: '1.82em', marginBottom:'2em' }}/>
 
-                            <Form centered onSubmit={this.getData()} size='large' style={{width:'40em', marginLeft:'15em'}}>
-                                <Form.Group widths='equal'>
-                                    <Form.Input fluid label='Name' placeholder='Name' />
-                                    <Form.Input fluid icon='mail' label='Email' placeholder='Email' />
-                                </Form.Group>
-                                <Form.TextArea style={{height:'10em'}}label='Message' placeholder='Your message...' />
-                                <Form.Button>Submit</Form.Button>
-                            </Form>
-                            <Header as="h5" style={{marginTop:'19em'}}>
-                                King's Diner <Icon className={css(this.styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
-                            </Header>
-                    
-                </Container>
-            </Segment>
+                        <Form centered='true' onSubmit={this.getData()} size='large' style={{width:'40em', marginLeft:'15em'}}>
+                            <Form.Group widths='equal'>
+                                <Form.Input fluid label='Name' placeholder='Name' />
+                                <Form.Input fluid icon='mail' label='Email' placeholder='Email' />
+                            </Form.Group>
+                            <Form.TextArea style={{height:'10em'}}label='Message' placeholder='Your message...' />
+                            <Form.Button>Submit</Form.Button>
+                        </Form>
+                        <Header as="h5" style={{marginTop:'19em'}}>
+                            King's Diner <Icon className={css(this.styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
+                        </Header>
+                        
+                    </Container>
+                </Segment>
+            </div>
         );
     }
   }

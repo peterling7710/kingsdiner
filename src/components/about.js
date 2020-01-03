@@ -42,26 +42,21 @@ class About extends React.Component{
 
     render () {
         return(
-            <Segment vertical>
-                <Container textAlign='center'>
-                    <Grid style={{marginTop: "1em"}}>    
-                        <Divider section />
-                        <Grid.Row centered >
-                            <Header as='h1' content='About Us' />
-                        </Grid.Row>
+            <div id="about">
+                <section className="about">
+                    <Segment id={"about"} vertical>
+                        <Grid className="">    
+                            <Divider section />
+                            <Grid.Row centered >
+                                <Header as='h1' content='About Us' />
+                            </Grid.Row>
+                        </Grid>
+                    </Segment>
 
-                        <Image centered='true' size='massive' src='/images/frontView2.png' />
+                    <Divider section />
 
-                        {/* FOOTER */}
-                        <Grid.Row centered>
-                            <Header as="h5" style={{marginTop:'14.4em'}}>
-                                King's Diner <Icon className={css(this.styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
-                            </Header>
-                        </Grid.Row>
-                    </Grid>
-                    
-                </Container>
-            </Segment>
+                </section>
+            </div>
         );
     }
   }

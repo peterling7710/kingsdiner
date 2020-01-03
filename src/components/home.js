@@ -15,20 +15,20 @@ class Home extends React.Component{
 
     render () {
         return(
-            <Segment vertical>
-                <Container textAlign='center'>
-                    <Grid>    
-                        <Divider section />
+            <div id="home">
+                <Segment id={"home"} vertical>
+                    <Container textAlign='center'>
+                        <Grid>    
+                            <Divider section />
 
-                        {/* FOOTER */}
-                        <Grid.Row centered>
-                            <Footer/>
-                        </Grid.Row>
+                            <Grid.Row centered>
+                            </Grid.Row>
 
-                    </Grid>
-                    
-                </Container>
-            </Segment>
+                        </Grid>
+                        
+                    </Container>
+                </Segment>
+            </div>
         );
     }
   }
