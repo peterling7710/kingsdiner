@@ -3,14 +3,40 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
+  font-family: "barlow", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
+
+/*
+body{
+}
+*/
 
 /*NAVBAR*/
-.logo {
-  font-size: 25px;
+
+.navbar .logo {
+  font-size: 30px;
+  
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.is-paused {
+  animation-play-state: paused;
+}
+
+/*###################################*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,7 +72,87 @@ html {
   }
 }
 
-/*
-.test{
+#home{
+  padding-top: 25px;
+  font-family: "barlow", sans-serif;
+  background: url("/images/food3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 80%;
+}
 
-}*/
+#home .hours{
+  text-align: left;
+  margin-top: 3em;
+  padding-left: 30em;
+  color: #7D7D7D;
+  width: 100%;
+  
+}
+
+#home .hours .hoursList{
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  font-size: 20px;
+  height: 600px;
+  width: 320px;
+  font-weight:"bold";
+  z-index: 1;
+  margin-right: -50px;
+}
+
+#home .ui .image{
+  height: 700px;
+  float: left;
+  margin-left: -100%;
+  margin-top: -2em;
+  margin-bottom: 100px;
+  padding-top: 15%;
+  position: relative;
+}
+
+#home .image-stack::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+#about{
+  padding-top: 25px;
+  font-family: "barlow", sans-serif;
+  background: url("/images/frontView.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  top:0px;
+  left:0px;
+}
+
+#about .aboutText{
+  color: aliceblue;
+}
+
+.ui.header{
+  font-family: "barlow", sans-serif;
+}
+
+.ui .stackable .menu{
+  background-color: #9BB29B;
+}
+
+.ui .container{
+  font-family: "barlow", sans-serif;
+}
+
+.footer .navbar .iconmini{
+  font-size: '0.8em';
+}

@@ -1,5 +1,8 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { Document, Page } from 'react-pdf';
+import {Footer} from '../components/footer.js';
+
 import {
     Segment,
     Container,
@@ -44,55 +47,64 @@ class Menu extends React.Component{
 
     state = { 
         visible: true,
-        url: '/images/menu1.png' 
+        url: '/images/menu1.png',
+        numPages: null,
+        pageNumber: 1,
     }
 
-    displayDinner = (prevState) => {
+    displayBrunch = (prevState) => {
 
-        this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu1.png'}))
+        this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu1.png', pageNumber: 1}))
     }
     
     displayDinner = (prevState) => {
 
-        this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu2.jpg'}))
+        this.setState((prevState) => ({visible: !this.state.visible, url: '/images/menu2.jpg', pageNumber: 2}))
     }
+
+    onDocumentLoadSuccess = ({ numPages }) => {
+        this.setState({ numPages });
+      }
         
         
     render () {
-        const visible = this.state.visible
-        const url = this.state.url
+        const { visible, url, numPages, pageNumber } = this.state;
 
         return(
             <div id="menu">
                 <Segment id={"menu"} vertical>
-                    <Grid style={{ marginTop: '1em' }} centered>    
-                        <Grid.Row centered>
-                            <Header as='h1' content='Menu' />
-                        </Grid.Row>
+                    <Grid style={{ marginBottom: '0em' }} centered>    
 
                         <Grid.Row centered>
                             <Button.Group size='small'>
-                                <Button
+                                <Button 
                                     onClick={this.displayBrunch}>
-                                    Brunch
+                                    Page 1
                                 </Button>
                                 <Button.Or />
-                                <Button
+                                <Button positive
                                     onClick={this.displayDinner}>
-                                    Dinner
+                                    Page 2
                                 </Button>
                             </Button.Group>
-                        </Grid.Row>
+                        </Grid.Row>    
+                        
 
+                    <Grid.Row centered>
+                    
+                    <Document
+                        file="/images/KD_menu_Jan5.pdf"
+                        onLoadSuccess={this.onDocumentLoadSuccess}
+                        >
+                        <Page pageNumber={pageNumber} />
+                        <p style={{ marginBottom: '2em'}}>Page {pageNumber} of {numPages}</p>
+                    </Document>
+                    </Grid.Row>
                     </Grid>
 
-                    <Grid style={{ marginTop: '2em' }} centered>
-                        <Divider hidden />
-                        <Transition visible={visible} animation='scale' duration={500}>
-                            <Image size='large' src={this.state.url} />
-                        </Transition>
-                    </Grid>
                 </Segment>
+                <Footer/>
+
             </div>
         );
     }

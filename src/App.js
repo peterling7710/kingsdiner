@@ -9,7 +9,6 @@ import Home from './components/home.js';
 import Menu from './components/menu.js';
 import About from './components/about.js';
 import Contact from './components/contact.js';
-import {ScrollDemo} from './components/navigation.js';
 import './App.css';
 import { Responsive } from 'semantic-ui-react';
 
@@ -46,23 +45,20 @@ class App extends React.Component{
           <ScrollToTop>
             <div className="App">
               <FixedNav/>
-                <ScrollDemo/>
-
-                <Home/>
-
-                <About/>
-
-                <Menu/>
-                <Contact/>
 
               {/* 
+                  <Home />
+                  <About/>
+                  <Menu/>
+                  <Contact/> 
+              */}
+                
               <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/about' exact component={About} />
                 <Route path='/menu' exact component={Menu} />
                 <Route path='/contact' exact component={Contact} />
               </Switch>
-              */}
               
             </div>
           </ScrollToTop>
