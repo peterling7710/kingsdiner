@@ -43,15 +43,14 @@ useEffect(() => {
 
   return(
     <div className={"navbar footer"}>
-            <Segment>
+        <Segment>
 
-                <img width="60px" src='/images/kingsdinerlogo.png' alt="kings diner logo."/>
-                <Header style={{fontSize:"10px", marginTop:"5px", marginBottom:""}}>906 Kingston Road, Toronto</Header>
-                <Header as="h5" style={{marginTop:"0"}}>
-                    King's Diner <Icon className={css(styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
-                </Header>
-            </Segment>
-            
+            <img width="60px" src='/images/kingsdinerlogo.png' alt="kings diner logo."/>
+            <Header style={{fontSize:"10px", marginTop:"5px", marginBottom:""}}>906 Kingston Road, Toronto</Header>
+            <Header as="h5" style={{marginTop:"0"}}>
+                King's Diner <Icon className={css(styles.iconmini)} name='copyright outline' size="mini" fitted/> 2019
+            </Header>
+        </Segment>
     </div>
 
     )

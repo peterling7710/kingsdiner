@@ -19,7 +19,7 @@ class Contact extends React.Component{
 
     render () {
         return(
-            <div id="contact">
+            <div id="contact" style={{body: "100%"}}>
                 <Segment id={"contact"} vertical centered='true'>
                     <Container centered='true'>
         

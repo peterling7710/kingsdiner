@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { Document, Page } from 'react-pdf';
-import { pdfjs } from 'react-pdf';
 import {Footer} from '../components/footer.js';
 
 import {
@@ -15,9 +13,6 @@ import {
     Transition,
     Image
      } from 'semantic-ui-react';
-
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf.worker.js`;
 
 class Menu extends React.Component{
 
@@ -77,8 +72,7 @@ class Menu extends React.Component{
             <div id="menu">
                 <Segment id={"menu"} vertical>
                     <Grid style={{ marginBottom: '0em' }} centered>    
-
-                        <Grid.Row centered>
+                        {/*<Grid.Row centered>
                             <Button.Group size='small'>
                                 <Button 
                                     onClick={this.displayBrunch}>
@@ -90,35 +84,16 @@ class Menu extends React.Component{
                                     Page 2
                                 </Button>
                             </Button.Group>
-                        </Grid.Row>    
-                        
+                        </Grid.Row>  */}
+        
+                        <Grid.Row style={{marginTop:"2em", marginBottom:"1em"}} centered>
 
-                    <Grid.Row centered>
-                        
-                    <div onContextMenu={e=>e.preventDefault()}>
-                        <Document
-                            file={'/images/KD_menu_Jan9.pdf'}
-                            onLoadSuccess={this.onDocumentLoadSuccess}
-                            >
-
-                            {/*
-                                Array.from(
-                                new Array(numPages),
-                                (el, index) => (
-                                    <Page
-                                    key={`page_${index + 1}`}
-                                    pageNumber={index + 1}
-                                    />
-                                ),
-                                )
-                            */}
-
-                            <Page pageNumber={pageNumber} />
-                        </Document>
-                    </div>
-
-                    </Grid.Row>
-                    <p style={{marginBottom:"2em"}}>Page {pageNumber} of {numPages}</p>
+                            <iframe 
+                                title="menu" 
+                                src="/images/KD_menu_Jan9.pdf"
+                                width="800px" 
+                                height="700px"/>
+                        </Grid.Row>
                     </Grid>
                 
                 </Segment>
