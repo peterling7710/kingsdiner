@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { Document, Page } from 'react-pdf/dist/entry.webpack';
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import {Footer} from '../components/footer.js';
 
 import {
@@ -15,6 +16,8 @@ import {
     Image
      } from 'semantic-ui-react';
 
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf.worker.js`;
 
 class Menu extends React.Component{
 
@@ -95,6 +98,7 @@ class Menu extends React.Component{
                         file={'/images/KD_menu_Jan9.pdf'}
                         onLoadSuccess={this.onDocumentLoadSuccess}
                         >
+
                         {/*
                             Array.from(
                             new Array(numPages),
@@ -105,8 +109,8 @@ class Menu extends React.Component{
                                 />
                             ),
                             )
-                        
                         */}
+
                         <Page pageNumber={pageNumber} />
                     </Document>
                     </Grid.Row>
