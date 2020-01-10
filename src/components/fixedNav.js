@@ -11,23 +11,6 @@ export const FixedNav = ({mobile}) => {
 
 const [atTop, setTop] = useState([false])
 
-const handleScroll= () =>{
-  if (window.pageYOffset > 0) {
-    setTop(false);
-  }else{
-    setTop(true);
-  }
-}
-
-useEffect(() => {
-  window.addEventListener("scroll", handleScroll);
-  console.log("Created");
-  return () => {
-    console.log("Cleaned up");
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-
   return(
     <div className={"navbar"}>
       <Menu className={atTop[0] ? "is-paused" : ""} inverted={atTop[0]} stackable>
