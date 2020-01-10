@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import {Footer} from '../components/footer.js';
 
 import {
@@ -90,11 +91,28 @@ class Menu extends React.Component{
                         
 
                     <Grid.Row centered>
-                    
-                    
+                    <Document
+                        file={'/images/KD_menu_Jan9.pdf'}
+                        onLoadSuccess={this.onDocumentLoadSuccess}
+                        >
+                        {/*
+                            Array.from(
+                            new Array(numPages),
+                            (el, index) => (
+                                <Page
+                                key={`page_${index + 1}`}
+                                pageNumber={index + 1}
+                                />
+                            ),
+                            )
+                        
+                        */}
+                        <Page pageNumber={pageNumber} />
+                    </Document>
                     </Grid.Row>
+                    <p style={{marginBottom:"2em"}}>Page {pageNumber} of {numPages}</p>
                     </Grid>
-
+                
                 </Segment>
                 <Footer/>
 

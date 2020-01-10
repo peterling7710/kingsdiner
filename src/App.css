@@ -156,3 +156,7 @@ body{
 .footer .navbar .iconmini{
   font-size: '0.8em';
 }
+
+iframe{
+  z-index: 1;
+}
