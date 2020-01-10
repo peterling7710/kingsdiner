@@ -1,11 +1,7 @@
 import React from 'react';
 import {Footer} from '../components/footer.js';
 import {
-    Segment,
     Container,
-    Grid,
-    Divider,
-    Icon,
     Header,
     Form
      } from 'semantic-ui-react';

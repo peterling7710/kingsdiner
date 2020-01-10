@@ -1,18 +1,13 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
 import {Footer} from '../components/footer.js';
 
 import {
     Segment,
-    Container,
     Grid,
-    Divider,
-    Icon,
-    Header,
     List,
     Card,
-    Rail,
-    Image, Responsive
+    Image, 
+    Responsive
      } from 'semantic-ui-react';
 
 

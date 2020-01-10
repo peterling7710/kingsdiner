@@ -1,47 +1,12 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
 import {Footer} from '../components/footer.js';
 
 import {
     Segment,
-    Container,
-    Grid,
-    Divider,
-    Icon,
-    Header,
-    Button,
-    Transition,
-    Image
+    Grid
      } from 'semantic-ui-react';
 
 class Menu extends React.Component{
-
-    styles = StyleSheet.create({
-        iconmini: {
-            fontSize: '0.8em',
-
-        },
-
-        red: {
-            backgroundColor: 'red'
-        },
-    
-        blue: {
-            backgroundColor: 'blue'
-        },
-    
-        hover: {
-            ':hover': {
-                backgroundColor: 'red'
-            }
-        },
-    
-        small: {
-            '@media (max-width: 600px)': {
-                backgroundColor: 'red',
-            }
-        }
-    });
 
     state = { 
         visible: true,
