@@ -24,7 +24,7 @@ class Home extends React.Component{
                 <Segment vertical>
                     <Grid verticalAlign='middle'className={"hours"}>
                         <Grid.Row className="image-stack">
-                        <Card className={"hoursList"} textAlign='left'>
+                        <Card className={"hoursList"}>
                                 <Card.Content>
                                     <List>
                                         <List.Content>
