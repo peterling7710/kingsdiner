@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import {backDrop} from './components/backdrop.js';
-import {HomepageLayout} from './components/homepagelayout.js';
 import {Link, BrowserRouter, Switch, Route} from 'react-router-dom';
 import {FixedNav} from './components/fixedNav.js';
 import {ScrollToTop} from './components/scrollToTop.js';
