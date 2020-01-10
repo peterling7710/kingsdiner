@@ -128,7 +128,7 @@ body{
 #about{
   padding-top: 25px;
   font-family: "barlow", sans-serif;
-  background: url("/images/food5.jpg");
+  background: url("/images/food4.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -140,7 +140,15 @@ body{
 }
 
 #about .aboutText{
-  color: aliceblue;
+  font-family: "barlow", sans-serif;
+  color: #7D7D7D;
+}
+
+#about .aboutCard{
+  width: 100%;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .ui.header{
