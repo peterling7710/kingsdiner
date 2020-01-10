@@ -16,11 +16,13 @@
     "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.2.0",
     "semantic-ui-react": "^0.88.2",
+    "serve": "^11.3.0",
     "typeface-barlow": "^0.0.71",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
