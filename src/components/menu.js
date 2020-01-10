@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { Document, Page } from 'react-pdf';
 import {Footer} from '../components/footer.js';
 
 import {
