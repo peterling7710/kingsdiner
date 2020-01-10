@@ -1,5 +1,9 @@
 import React from 'react';
 import {Footer} from '../components/footer.js';
+import logo from "../images/kingsdinerlogo.png";
+import im from "../images/food3.jpg";
+import food1 from "../images/food1alt.jpg"
+
 
 import {
     Segment,
@@ -15,7 +19,7 @@ class Home extends React.Component{
 
     render () {
         return(
-            <div id="home">
+            <div id="home" style={{backgroundImage: `url(${im})`}}>
                 <Responsive>
                 <Segment vertical>
                     <Grid verticalAlign='middle'className={"hours"}>
@@ -24,7 +28,7 @@ class Home extends React.Component{
                                 <Card.Content>
                                     <List>
                                         <List.Content>
-                                            <List.Item ><img width="100px" src='/images/kingsdinerlogo.png' alt="kings diner logo."/></List.Item>
+                                            <List.Item ><img width="100px" src={logo} alt="kings diner logo."/></List.Item>
                                             <List.Item style={{fontSize:"20px", marginTop: "15px", marginBottom:"0.5em"}}>906 Kingston Road</List.Item>
                                             <br/>
                                         </List.Content>
@@ -66,7 +70,7 @@ class Home extends React.Component{
                                     </List>
                                 </Card.Content>
                             </Card>
-                            <Image style={{marginLeft:"0px"}} rounded src='/images/food1alt.jpg'/>
+                            <Image style={{marginLeft:"0px"}} rounded src={food1}/>
                         </Grid.Row>
                     </Grid>
                 </Segment>

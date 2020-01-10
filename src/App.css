@@ -75,7 +75,6 @@ body{
 #home{
   padding-top: 25px;
   font-family: "barlow", sans-serif;
-  background: url("/images/food3.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -188,7 +187,6 @@ iframe{
 #menu{
   padding-top: 25px;
   font-family: "barlow", sans-serif;
-  background: url("/images/food5.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

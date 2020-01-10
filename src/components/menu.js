@@ -1,5 +1,8 @@
 import React from 'react';
 import {Footer} from '../components/footer.js';
+import im from "../images/food5.jpg";
+import pdfim from "../images/KD_menu_Jan9.pdf"
+
 
 import {
     Segment,
@@ -34,7 +37,8 @@ class Menu extends React.Component{
         const { visible, url, numPages, pageNumber } = this.state;
 
         return(
-            <div id="menu">
+  
+            <div id="menu" style={{background: im }}>
                 <Segment id={"menu"} vertical>
                     <Grid style={{ marginBottom: '0em' }} centered>    
                         {/*<Grid.Row centered>
@@ -55,7 +59,7 @@ class Menu extends React.Component{
 
                             <iframe 
                                 title="menu" 
-                                src="/images/KD_menu_Jan9.pdf"
+                                src={pdfim}
                                 width="800px" 
                                 height="700px"/>
                         </Grid.Row>
