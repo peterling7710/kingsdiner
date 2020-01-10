@@ -92,13 +92,7 @@ class Menu extends React.Component{
 
                     <Grid.Row centered>
                     
-                    <Document
-                        file="/images/KD_menu_Jan5.pdf"
-                        onLoadSuccess={this.onDocumentLoadSuccess}
-                        >
-                        <Page pageNumber={pageNumber} />
-                        <p style={{ marginBottom: '2em'}}>Page {pageNumber} of {numPages}</p>
-                    </Document>
+                    
                     </Grid.Row>
                     </Grid>
 
