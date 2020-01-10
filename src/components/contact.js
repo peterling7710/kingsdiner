@@ -19,22 +19,20 @@ class Contact extends React.Component{
 
     render () {
         return(
-            <div id="contact" style={{body: "100%"}}>
-                <Segment id={"contact"} vertical centered='true'>
-                    <Container centered='true'>
-        
-                        <Header as='h1' content='Contact' style={{ marginTop: '1.82em', marginBottom:'2em' }}/>
+            <div id="contact">
+                <Container className={"maincontainer"} style={{marginBottom:"5.5em"}} centered='true'>
+                    <Header as='h1' content='Contact' style={{ marginTop: '1em', marginBottom:'0.6em' }}/>
+                    <p>Got any inquiries, comments, reccomendations? Let us know!</p>
 
-                        <Form centered='true' onSubmit={this.getData()} size='large' style={{width:'40em', marginLeft:'15em'}}>
-                            <Form.Group widths='equal'>
-                                <Form.Input fluid label='Name' placeholder='Name' />
-                                <Form.Input fluid icon='mail' label='Email' placeholder='Email' />
-                            </Form.Group>
-                            <Form.TextArea style={{height:'10em'}}label='Message' placeholder='Your message...' />
-                            <Form.Button>Submit</Form.Button>
-                        </Form>                        
-                    </Container>
-                </Segment>
+                    <Form className={"maincontainer"} centered='true' onSubmit={this.getData()} size='large' style={{width:'40em', marginLeft:'15em'}}>
+                        <Form.Group className={"maincontainer"} widths='equal'>
+                            <Form.Input className={"maincontainer"} fluid label='Name' placeholder='Name' />
+                            <Form.Input fluid icon='mail' label='Email' placeholder='Email' />
+                        </Form.Group>
+                        <Form.TextArea style={{height:'10em'}}label='Message' placeholder='Your message...' />
+                        <Form.Button>Submit</Form.Button>
+                    </Form>                        
+                </Container>
                 <Footer/>
             </div>
         );

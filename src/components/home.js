@@ -12,7 +12,7 @@ import {
     List,
     Card,
     Rail,
-    Image
+    Image, Responsive
      } from 'semantic-ui-react';
 
 
@@ -21,6 +21,7 @@ class Home extends React.Component{
     render () {
         return(
             <div id="home">
+                <Responsive>
                 <Segment vertical>
                     <Grid verticalAlign='middle'className={"hours"}>
                         <Grid.Row className="image-stack">
@@ -29,37 +30,44 @@ class Home extends React.Component{
                                     <List>
                                         <List.Content>
                                             <List.Item ><img width="100px" src='/images/kingsdinerlogo.png' alt="kings diner logo."/></List.Item>
-                                            <List.Item style={{fontSize:"20px", marginTop: "15px"}}>906 Kingston Road</List.Item>
+                                            <List.Item style={{fontSize:"20px", marginTop: "15px", marginBottom:"0.5em"}}>906 Kingston Road</List.Item>
                                             <br/>
                                         </List.Content>
 
                                         <List.Content>
                                             <List.Item> 
-                                            <List.Header>Monday</List.Header>
-                                            <List.Description>Closed</List.Description>
+                                            <List.Header>MONDAY</List.Header>
+                                            <List.Description>CLOSED</List.Description>
                                             </List.Item>
                                         </List.Content>
+                                        
+                                        <br/>
+                                        <br/>
 
                                         <List.Content>
                                             <List.Item> 
-                                            <List.Header className={"bold"}>LUNCH</List.Header>
-                                            <List.Description></List.Description>
-                                            <List.Description>10:00 am - 8:30 pm</List.Description>
+                                            <List.Header style={{fontWeight:"bold", marginBottom:"0.5em"}}>BREAKFAST</List.Header>
+                                            <List.Description>TUESDAY TO FRIDAY</List.Description>
+                                            <List.Description>10:00 AM - 2:00 PM</List.Description>
+                                            <br/>
+                                            <List.Description>SATURDAY AND SUNDAY</List.Description>
+                                            <List.Description>8:00 AM - 2:00 PM</List.Description>
                                             </List.Item>
                                         </List.Content>
 
+                                        <br/>
+                                        <br/>
 
-                                            <List.Item> </List.Item>
-
-                                            <List.Item>Wed 10:00 am - 8:30 pm</List.Item>
-
-                                            <List.Item>Thu 10:00 am - 8:30 pm</List.Item>
-
-                                            <List.Item>Fri 10:00 am - 8:30 pm</List.Item>
+                                        <List.Content>
+                                            <List.Item> 
+                                            <List.Header style={{fontWeight:"bold", marginBottom:"0.5em"}}>DINNER</List.Header>
+                                            <List.Description>TUESDAY TO SATURDAY</List.Description>
+                                            <List.Description>2:00 PM - 8:30 PM</List.Description>
                                             <br/>
-                                            <List.Item>Sat 8:00 am - 8:30 pm</List.Item>
-
-                                            <List.Item>Sun 8:00 am - 4:00 pm</List.Item>
+                                            <List.Description>SUNDAY</List.Description>
+                                            <List.Description>2:00 PM - 4:00 PM</List.Description>
+                                            </List.Item>
+                                        </List.Content>
                                     </List>
                                 </Card.Content>
                             </Card>
@@ -67,6 +75,8 @@ class Home extends React.Component{
                         </Grid.Row>
                     </Grid>
                 </Segment>
+                </Responsive>
+
                 <Footer/>
                 
             </div>

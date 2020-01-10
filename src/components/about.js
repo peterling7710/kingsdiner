@@ -16,7 +16,7 @@ class About extends React.Component{
     render () {
         return(
             <div id="about">
-                <Segment id={"about"} className="test" vertical>
+                <Segment vertical>
                     <Container className={"aboutText"} text>
                     
                         <Header as='h1' className={"aboutText"} content='About Us' />
