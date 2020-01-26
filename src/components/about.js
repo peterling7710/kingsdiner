@@ -11,12 +11,13 @@ class About extends React.Component{
     render () {
         return(
             <div id="about">
-                <Container className={"aboutText"} style={{marginBottom:"20em"}} text>
+                <Container className={"aboutText"} style={{marginBottom:"20em", paddingTop:"5em"}} text>
                     
-                    <Header as='h1' style={{color:"white"}} content='About Us' />
                     
-                    <Card className="aboutCard">
-                        <Card.Content>
+                    <Card style={{paddingTop:"1.8em"}} className="aboutCard">
+                        <Header as='h1' style={{color:"black", fontFamily: "barlow, sans-serif"}} content='About Us' />
+
+                        <Card.Content style={{fontFamily: "barlow, sans-serif"}}>
                             Beanstalk. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                             ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
                             magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,

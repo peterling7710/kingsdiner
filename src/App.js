@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/kingsdinerlogo.svg';
 import {backDrop} from './components/backdrop.js';
 import {Link, BrowserRouter, Switch, Route} from 'react-router-dom';
 import {FixedNav} from './components/fixedNav.js';
@@ -56,7 +56,9 @@ class App extends React.Component{
                 <Route path='/' exact component={Home} />
                 <Route path='/about' exact component={About} />
                 <Route path='/menu' exact component={Menu} />
+                {/*
                 <Route path='/contact' exact component={Contact} />
+                */}
               </Switch>
               
             </div>

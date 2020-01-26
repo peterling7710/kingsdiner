@@ -16,6 +16,7 @@ export const Footer = ({mobile}) => {
 const styles = StyleSheet.create({
     iconmini: {
         fontSize: '0.8em',
+        lineHeight: '0.7'
 
     }
 });

@@ -18,7 +18,7 @@ const [atTop, setTop] = useState([false])
             <img src='/images/kingsdinerlogo.png' alt="kings diner logo."/>
           </Menu.Item>
 
-          {["about", "menu", "contact"].map(sec => (
+          {["about", "menu"].map(sec => (
             <Menu.Item key={sec} as={Link} to={`/${sec}`}>{sec}</Menu.Item>
           ))}
 

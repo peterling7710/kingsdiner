@@ -127,11 +127,11 @@ body{
 #about{
   padding-top: 25px;
   font-family: "barlow", sans-serif;
-  background: url("/images/food4.jpg");
+  background: url("/images/food44.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: 10% 20%;
   top:0px;
   left:0px;
   width: 100%;
